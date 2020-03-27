@@ -344,7 +344,7 @@ class morse
                 return 'x';
             case "-.-- ":
                 return 'y';
-            case "/":
+            case "/ ":
                 return ' ';
             case "--.. ":
                 return 'z';
