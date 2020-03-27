@@ -222,3 +222,19 @@ class count
         return bash;
     }
 }
+class morse
+{
+    public string morseEnco(char t)
+    {
+        switch (t)
+        {
+            case 'a':
+                return ".- ";
+            case 'b':
+                return"-... ";
+                
+                
+                
+                
+                
+                
