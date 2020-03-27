@@ -52,9 +52,7 @@ namespace ds
                         }
                         Console.WriteLine("\n");
                     }
-                    // string emri = "", vlerapas = "", VP = "";
-
-                    // char[]b=new char[5];
+                    
 
                     else if (args[2] == "2")
                     {
@@ -144,7 +142,7 @@ class count
     {
         char[] a = emri.ToCharArray();
         int countW = 1;
-        // int q = a.Length;
+       
         for (int i = 0; i < a.Length; i++)
         {
             if (a[i] == ' ')
@@ -177,7 +175,7 @@ class count
     {
         char[] a = emri.ToCharArray();
         int countW = 0;
-        char[] b = { 'a', 'e', 'ë', 'o', 'u', 'y', 'i', 'A', 'E', 'Ë', 'O', 'U', 'Y', 'I' };
+        char[] b = { 'a', 'e', 'Ã«', 'o', 'u', 'y', 'i', 'A', 'E', 'Ã‹', 'O', 'U', 'Y', 'I' };
         // int q = a.Length;
         for (int i = 0; i < a.Length; i++)
         {
@@ -196,7 +194,7 @@ class count
     {
         char[] a = emri.ToCharArray();
         int countW = 0, space = 0;
-        char[] b = { 'a', 'e', 'ë', 'o', 'u', 'y', 'i', 'A', 'E', 'Ë', 'O', 'U', 'Y', 'I' };
+        char[] b = { 'a', 'e', 'Ã«', 'o', 'u', 'y', 'i', 'A', 'E', 'Ã‹', 'O', 'U', 'Y', 'I' };
         int q = a.Length;
         for (int i = 0; i < a.Length; i++)
         {
