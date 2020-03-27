@@ -374,10 +374,28 @@ class caesar
             cipher += c;
         }
         return cipher;
-    }    
-    
-                
-                
-                
-                
-                
+    }
+    public string caesarCipherDeco(string st, int k)
+    {
+        string orig = "";
+
+        for (int i = 0; i < st.Length; i++)
+        {
+            int a;
+
+            a = (int)st[i] - k;
+            if ((int)st[i] + k > a + k)
+            {
+                a = st[i] - k;
+                if (a > 122) { a = (int)st[i] - k; }
+            }
+
+
+            char c = (char)a;
+            orig += c;
+        }
+        return orig;
+    }
+    //  https://code.sololearn.com/cg0k07P9f2r8/#cs
+
+}   
