@@ -7,11 +7,11 @@
 Përdorimi : 
 
 
-                                                                              <args[0]>   <args[1]>      <args[2]>      <args[3]>
-                                                            Exit =>              1                   
-                                                           Count =>           <teksti>       2           <opcioni>
-                                                      Morse Code =>           <teksti>       3           <opcioni>
-                                             Caesar Cipher Code  =>           <teksti>       4           <opcioni>        <key>
+                                                   <args[0]>   <args[1]>      <args[2]>      <args[3]>
+                                 Exit =>              1                   
+                                Count =>           <teksti>       2           <opcioni>
+                           Morse Code =>           <teksti>       3           <opcioni>
+                  Caesar Cipher Code  =>           <teksti>       4           <opcioni>        <key>
                                   
                                   
                                   
@@ -63,7 +63,7 @@ C:\detyra>dS pershendetje 2 7
 numri i simboleve : 0
 
 
-              Morse Code :
+                 Morse Code :
               
 C:\detyra>dS pershendetje 3 1
 .--. . .-. ... .... . -. -.. . - .--- .
@@ -71,7 +71,7 @@ C:\detyra>dS ".--. . .-. ... .... . -. -.. . - .--- . " 3 2
 Pershendetje
 
 
-         Ceasar Cipher Code :
+           Ceasar Cipher Code :
 
 C:\detyra>dS pershendetje 4 3 1
 ciphertext : shuvkhqghwmh
