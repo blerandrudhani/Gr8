@@ -159,7 +159,7 @@ class count
 
         char[] a = emri.ToCharArray();
         int countW = 0;
-        // int q = a.Length;
+        
         for (int i = 0; i < a.Length; i++)
         {
             if (a[i] == '.')
@@ -176,7 +176,7 @@ class count
         char[] a = emri.ToCharArray();
         int countW = 0;
         char[] b = { 'a', 'e', 'ë', 'o', 'u', 'y', 'i', 'A', 'E', 'Ë', 'O', 'U', 'Y', 'I' };
-        // int q = a.Length;
+        
         for (int i = 0; i < a.Length; i++)
         {
             for (int j = 0; j < b.Length; j++)
@@ -278,7 +278,9 @@ class morse
                 return "-..- ";
             case 'y':
                 return "-.-- ";
-            // for space 
+            case ' ':
+                return "/ ";
+            
             case 'z':
                 return "--.. ";
         }
@@ -342,7 +344,8 @@ class morse
                 return 'x';
             case "-.-- ":
                 return 'y';
-            // for space 
+            case "/":
+                return ' ';
             case "--.. ":
                 return 'z';
         }
