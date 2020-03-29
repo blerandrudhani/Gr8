@@ -397,7 +397,7 @@ class caesar
             return new string(plain);
         }
 
-        public string ceasarCipherDeco(string cip, int offset)
+        public string caesarCipherDeco(string cip, int offset)
         {
             string temp = cip.ToLower();
             char[] cipher = temp.ToCharArray();
@@ -428,7 +428,7 @@ class caesar
                 
                 
 
-                Console.WriteLine("test " + shift+ ": " + ceasarCipherDeco(emri,shift));
+                Console.WriteLine("test " + shift+ ": " + caesarCipherDeco(emri,shift));
                 shift++;
             }
            
