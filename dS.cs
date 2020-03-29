@@ -78,6 +78,7 @@ namespace ds
                    
                     if (args[2] == "1") { Console.WriteLine("ciphertext : " + caesarC.caesarCipherEnco(args[0], k)); }
                     else if (args[2] == "2") { Console.WriteLine("plaintext : " + caesarC.caesarCipherDeco(args[0], k)); }
+                    else if(args[2]=="3") {caesarC.bruteForce(args[0]);}
                     else { Console.WriteLine("Wrong input !!!"); }
 
                 }
@@ -421,6 +422,19 @@ class caesar
                 }
             }
             return new string(cipher);
+        }
+     public  void bruteForce(string emri)
+        {
+            int shift = 1;
+            for(int i = 0; i < 26; i++)
+            {
+                
+                
+
+                Console.WriteLine("test " + shift+ ": " + ceasarCipherDeco(emri,shift));
+                shift++;
+            }
+           
         }
     //  https://code.sololearn.com/cg0k07P9f2r8/#cs
 
