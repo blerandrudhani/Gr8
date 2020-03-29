@@ -367,38 +367,61 @@ class caesar
             'U', 'V', 'W', 'X', 'Y', 'Z'
 
         };
-    public string caesarCipherEnco(string st, int k)
-    {
-        string cipher = "";
-        for (int i = 0; i < st.Length; i++)
+     public string caesarCipherEnco(string text, int offset)
         {
-            int a = (int)st[i] + k;
-            char c = (char)a;
-            cipher += c;
-        }
-        return cipher;
-    }
-    public string caesarCipherDeco(string st, int k)
-    {
-        string orig = "";
+            string temp = text.ToLower();
+            char[] plain = temp.ToCharArray();
 
-        for (int i = 0; i < st.Length; i++)
-        {
-            int a;
-
-            a = (int)st[i] - k;
-            if ((int)st[i] + k > a + k)
+            for (int i = 0; i < plain.Length; i++)
             {
-                a = st[i] - k;
-                if (a > 122) { a = (int)st[i] - k; }
+                for (int j = 0; j < chars.Length; j++)
+                {
+                    if (j <= chars.Length - offset)
+                    {
+                        if (plain[i] == chars[j])
+                        {
+                            if (j +offset> 25)
+                            {
+
+                                plain[i] =chars[(j+offset)%26] ;
+                                break;
+                            }
+                            plain[i] = chars[j+ offset];
+                            break;
+                        }
+                    }
+                    else if (plain[i] == chars[j])
+                    {
+                        plain[i] = chars[j - (chars.Length - offset )];
+                    }
+                }
             }
-
-
-            char c = (char)a;
-            orig += c;
+            return new string(plain);
         }
-        return orig;
-    }
+
+        public string ceasarCipherDeco(string cip, int offset)
+        {
+            string temp = cip.ToLower();
+            char[] cipher = temp.ToCharArray();
+
+            for (int i = 0; i < cipher.Length; i++)
+            {
+                for (int j = 0; j < chars.Length; j++)
+                {
+                    if (j >= offset && cipher[i] == chars[j])
+                    {
+                        cipher[i] = chars[j - offset];
+                        break;
+                    }
+                    if (cipher[i] == chars[j] && j < offset)
+                    {
+                        cipher[i] = chars[(chars.Length - offset ) + j];
+                        break;
+                    }
+                }
+            }
+            return new string(cipher);
+        }
     //  https://code.sololearn.com/cg0k07P9f2r8/#cs
 
 }   
