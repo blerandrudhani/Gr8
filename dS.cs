@@ -74,10 +74,14 @@ namespace ds
                 }
                 else if (args[1] == "4")
                 {
-                    int k = Convert.ToInt32(args[3]);
+                    
                    
-                    if (args[2] == "1") { Console.WriteLine("ciphertext : " + caesarC.caesarCipherEnco(args[0], k)); }
-                    else if (args[2] == "2") { Console.WriteLine("plaintext : " + caesarC.caesarCipherDeco(args[0], k)); }
+                    if (args[2] == "1") {
+                        int k = Convert.ToInt32(args[3]);
+                        Console.WriteLine("ciphertext : " + caesarC.caesarCipherEnco(args[0], k)); }
+                    else if (args[2] == "2") {
+                        int k = Convert.ToInt32(args[3]);
+                        Console.WriteLine("plaintext : " + caesarC.caesarCipherDeco(args[0], k)); }
                     else if(args[2]=="3") {caesarC.bruteForce(args[0]);}
                     else { Console.WriteLine("Wrong input !!!"); }
 
