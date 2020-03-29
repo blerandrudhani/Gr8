@@ -12,7 +12,7 @@ Përdorimi :
                                 Count =>           <teksti>       2           <opcioni>
                            Morse Code =>           <teksti>       3           <opcioni>
                   Caesar Cipher Code  =>           <teksti>       4           <opcioni>        <key>
-                                  
+           Caesar Cipher Brute Force  =>           <teksti>       4               3
                                   
                                   
 
@@ -77,3 +77,35 @@ C:\detyra>dS pershendetje 4 3 1
 ciphertext : shuvkhqghwmh
 C:\detyra>dS shuvkhqghwmh 4 3 2
 plaintext : pershendetje
+           
+           Brute force:
+           
+C:\detyra>prova shuvkhqghwmh 4 3
+test 1: rgtujgpfgvlg
+test 2: qfstifoefukf
+test 3: pershendetje
+test 4: odqrgdmcdsid
+test 5: ncpqfclbcrhc
+test 6: mbopebkabqgb
+test 7: lanodajzapfa
+test 8: kzmncziyzoez
+test 9: jylmbyhxyndy
+test 10: ixklaxgwxmcx
+test 11: hwjkzwfvwlbw
+test 12: gvijyveuvkav
+test 13: fuhixudtujzu
+test 14: etghwtcstiyt
+test 15: dsfgvsbrshxs
+test 16: crefuraqrgwr
+test 17: bqdetqzpqfvq
+test 18: apcdspyopeup
+test 19: zobcroxnodto
+test 20: ynabqnwmncsn
+test 21: xmzapmvlmbrm
+test 22: wlyzoluklaql
+test 23: vkxynktjkzpk
+test 24: ujwxmjsijyoj
+test 25: tivwlirhixni
+test 26: shuvkhqghwmh
+
+
