@@ -21,7 +21,7 @@ Count  <opcioni>  =>    1 . Count Char , 2 . Count Lines , 3 . Count Word , 4 . 
 Morse Code <opcioni> =>  1 . Encode , 2 . Decode .
            <teksti> =>  “.--. . .-. ... .... . -. -.. . - .--- .(+space)” .
 
-Caesar Cipher Code <opcioni> =>  1 . Encode , 2 . Decode .
+Caesar Cipher Code <opcioni> =>  1 . Encode , 2 . Decode , 3 . Brute Force .
 
 
 
@@ -38,7 +38,7 @@ Count Wovels – numëron zanoret
 Count consonants – numëron bashtingëlloret
 Encode – kthen plaintext-in në ciphertext
 Decode – kthen ciphertext-in në plaintext
-
+Brute Force - provon të gjitha celësat e mundshëm dhe shfaq plaintext-in 
 
 
 
