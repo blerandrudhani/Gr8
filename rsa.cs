@@ -1,3 +1,5 @@
+namespace ds
+{
 class rsa
     {
         des des = new des();
@@ -161,3 +163,4 @@ class rsa
             return plaintext;
         }
     }
+}
