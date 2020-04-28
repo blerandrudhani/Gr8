@@ -10,6 +10,10 @@ class rsa
 
             string celesiPublic = r.ToXmlString(false);
             File.WriteAllText("C:/Users/hp/Desktop/keys/" + emri + ".xml", celesiPublic);
+            
+             string filepath = "C:/Users/hp/Desktop/keys/users.txt";
+            emri = emri + " ";
+            File.AppendAllText(filepath, emri);
         }
         public void deleteUser(string emri)
         {
@@ -57,15 +61,20 @@ class rsa
         string KEY = Convert.ToBase64String(keyb);
             string IV = Convert.ToBase64String(ivb);
 
-            string rrrr = encrypt(emri, mesazhi, KEY, IV);
+            string enctext = encrypt(emri, mesazhi, KEY, IV);
+        string[] arg = enctext.Split();
+        string filepath = "C:/Users/hp/Desktop/keys/users.txt";
+            arg[0] = arg[0] + " ";
+            File.AppendAllText(filepath, arg[0]);
+        
         if (path == " ")
         {
-            Console.WriteLine("Encrypted ...:        " + rrrr);
+            Console.WriteLine("Encrypted ...:        " + enctext);
 
         }
         else
         {
-            File.WriteAllText("C:/Users/hp/Desktop/keys/" + emri + "encrypted.xml", rrrr);
+            File.WriteAllText("C:/Users/hp/Desktop/keys/" + emri + "encrypted.xml", enctext);
             Console.WriteLine("teksti u ruajt ne :   C:/Users/hp/Desktop/keys/  ");
 
 
@@ -87,7 +96,8 @@ class rsa
 
 
 
-        Console.WriteLine("Decrypted ...:        " + arg[0] + "<-emri   teksti->   " + arg[1]);
+        Console.WriteLine(" Emri ..:" + arg[0]);
+        Console.WriteLine(" Decrypted ..:" + arg[1]);
 
 
 
