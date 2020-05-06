@@ -109,3 +109,202 @@ test 25: tivwlirhixni
 test 26: shuvkhqghwmh
 
 
+
+
+Projekti në lëndën Siguria e të Dhënave
+Faza e dytë
+
+
+
+
+
+
+Përdorimi : 
+
+
+                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
+
+                                   Create User   =>             create-user        <emri>      
+                                   Delete User   =>             delete-user        <emri>              
+                                   Import Key    =>             import-key          <emri>            <path>              
+                                  Export Key      =>            export-key           <emri>            <opcioni>  
+                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
+                                 Read Text        =>              read-text            <mesazhi>
+
+
+
+
+
+
+Komanda : 
+
+
+Create User – krijon celesin public dhe privat per perdoruesin
+Delete User – fsjin celesin public dhe privat te perdoruesit
+Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
+Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
+Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
+Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
+
+          
+
+
+
+
+
+
+
+
+Rezultatet e ekzekutimit :
+
+ 
+ 
+Projekti në lëndën Siguria e të Dhënave
+Faza e dytë
+
+
+
+
+
+
+Përdorimi : 
+
+
+                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
+
+                                   Create User   =>             create-user        <emri>      
+                                   Delete User   =>             delete-user        <emri>              
+                                   Import Key    =>             import-key          <emri>            <path>              
+                                  Export Key      =>            export-key           <emri>            <opcioni>  
+                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
+                                 Read Text        =>              read-text            <mesazhi>
+
+
+
+
+
+
+Komanda : 
+
+
+Create User – krijon celesin public dhe privat per perdoruesin
+Delete User – fsjin celesin public dhe privat te perdoruesit
+Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
+Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
+Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
+Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
+
+          
+
+
+
+
+
+
+
+
+Rezultatet e ekzekutimit :
+
+ 
+ 
+
+Projekti në lëndën Siguria e të Dhënave
+Faza e dytë
+
+
+
+
+
+
+Përdorimi : 
+
+
+                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
+
+                                   Create User   =>             create-user        <emri>      
+                                   Delete User   =>             delete-user        <emri>              
+                                   Import Key    =>             import-key          <emri>            <path>              
+                                  Export Key      =>            export-key           <emri>            <opcioni>  
+                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
+                                 Read Text        =>              read-text            <mesazhi>
+
+
+
+
+
+
+Komanda : 
+
+
+Create User – krijon celesin public dhe privat per perdoruesin
+Delete User – fsjin celesin public dhe privat te perdoruesit
+Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
+Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
+Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
+Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
+
+          
+
+
+
+
+
+
+
+
+Rezultatet e ekzekutimit :
+
+ 
+ 
+
+Projekti në lëndën Siguria e të Dhënave
+Faza e dytë
+
+
+
+
+
+
+Përdorimi : 
+
+
+                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
+
+                                   Create User   =>             create-user        <emri>      
+                                   Delete User   =>             delete-user        <emri>              
+                                   Import Key    =>             import-key          <emri>            <path>              
+                                  Export Key      =>            export-key           <emri>            <opcioni>  
+                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
+                                 Read Text        =>              read-text            <mesazhi>
+
+
+
+
+
+
+Komanda : 
+
+
+Create User – krijon celesin public dhe privat per perdoruesin
+Delete User – fsjin celesin public dhe privat te perdoruesit
+Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
+Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
+Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
+Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
+
+          
+
+
+
+
+
+
+
+
+Rezultatet e ekzekutimit :
+
+ 
+ 
+
+
+
