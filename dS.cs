@@ -86,6 +86,30 @@ namespace ds
                     else { Console.WriteLine("Wrong input !!!"); }
 
                 }
+                 else if (args[0] == "create-user")
+            {
+                rsa.createUser(args[1]);
+            }
+            else if (args[0] == "delete-user")
+            {
+                rsa.deleteUser(args[1]);
+            }
+            else if (args[0] == "import-key")
+            {
+                rsa.importKey(args[1], args[2]);
+            }
+            else if (args[0] == "export-key")
+            {
+                rsa.exportKey(args[1], args[2]);
+            }
+            else if (args[0] == "write-text")
+            {
+                rsa.writeText(args[1], args[2],args[3]);
+            }
+             else if (args[0] == "read-text")
+            {
+                rsa.readText(args[1]);
+            }
                 else
                 {
                     Console.WriteLine("Wrong input !!!");
