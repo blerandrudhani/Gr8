@@ -14,7 +14,7 @@ namespace ds
             count numero = new count();
             morse morseC = new morse();
             caesar caesarC = new caesar();
-             
+             rsa rsa = new rsa();
 
                 if (args[0] == "1")
                 {
