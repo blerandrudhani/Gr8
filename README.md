@@ -182,6 +182,7 @@ C:\detyra>b export-key siguria private
 
 
 C:\detyra>b import-key siguri C:\Users\hp\Desktop\write.txt
+
  File u zhvendos : C:/Users/hp/Desktop/keys/siguri
 
 
@@ -201,4 +202,7 @@ C:\detyra>b read-text "mQzcelucgVs= jKPLM9aNBXE= XulHvdCjBTHtInxydOjKXmIPG7l65kt
 
 
 C:\detyra>b delete-user siguria
+
  User : siguria u fshi
+ 
+ 
