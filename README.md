@@ -112,6 +112,9 @@ test 26: shuvkhqghwmh
 
 
 
+
+
+
                                          Projekti në lëndën Siguria e të Dhënave
                                                     Faza e dytë
 
@@ -145,8 +148,11 @@ Create User – krijon celesin public dhe privat per perdoruesin
 Delete User – fsjin celesin public dhe privat te perdoruesit
 
 Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
+
 Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
-Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
+
+Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path                 nuk jepet
+
 Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
 
           
@@ -164,6 +170,7 @@ Rezultatet e ekzekutimit :
   
 C:\detyra>b create-user siguria
  User :siguria u krijua
+ 
 
 
 
