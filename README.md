@@ -141,7 +141,9 @@ Komanda :
 
 
 Create User – krijon celesin public dhe privat per perdoruesin
+
 Delete User – fsjin celesin public dhe privat te perdoruesit
+
 Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
 Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
 Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
@@ -158,9 +160,11 @@ Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran teks
 
 Rezultatet e ekzekutimit :
 
+
   
 C:\detyra>b create-user siguria
  User :siguria u krijua
+
 
 
 C:\detyra>b export-key siguria private
@@ -169,8 +173,10 @@ C:\detyra>b export-key siguria private
 
 
 
+
 C:\detyra>b import-key siguri C:\Users\hp\Desktop\write.txt
  File u zhvendos : C:/Users/hp/Desktop/keys/siguri
+
 
 
 C:\detyra>b write-text siguria pershendetje ""
@@ -179,9 +185,11 @@ Encrypted ...:        mQzcelucgVs= jKPLM9aNBXE= XulHvdCjBTHtInxydOjKXmIPG7l65ktp
 
 
 
+
 C:\detyra>b read-text "mQzcelucgVs= jKPLM9aNBXE= XulHvdCjBTHtInxydOjKXmIPG7l65ktphUB7B/6qqQ4Vx8G3XprR15WeXLxIiA6KTeSAD0LydLrGAkkePu/EqwpgtJpsOWdT/e3vQin65T6oNXPKzCzWKOuJTVkpj2kQe+GsbkiVCNp9h9M8xj3O6AQaFlnlNnxphlLrbVjX+9E= owd/gWUupcOFFOe9k5keJg=="
  Emri ..:siguria
  Decrypted ..:pershendetje
+
 
 
 
