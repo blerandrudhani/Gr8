@@ -169,12 +169,14 @@ Rezultatet e ekzekutimit :
 
   
 C:\detyra>b create-user siguria
+
  User :siguria u krijua
  
 
 
 
 C:\detyra>b export-key siguria private
+
  Celesi privat ..: 
 <RSAKeyValue><Modulus>tWDE0CgTAOQOWsGklkg+irGvDoLM/uGNCn3XeuTtqWLWrenZ15/VZ0/B/flYR4S0698sp18E+UoNOM1sE8V4bX1OnZrsp5O2rAOVYjMSoGrTn7B74kiInHeYQw/LZmZGghuxgqHvADoxyLj4jdGet2lM/+R2Aw5MopaHQ3BkqV0=</Modulus><Exponent>AQAB</Exponent><P>xlwndCJK8GPG30VWG712pKuHz/EXe/JJbItC7HMbNIHyRKqhMP3FRUoB/iM8Xg8ZY1wwjsNX2oMI7jyLA443lw==</P><Q>6hVWtwP3ArUQ9xxPmkwbiWQg4uimMAnQEiWPU7Gp09VFY8cJpV91k+WKefX3LZOgpRAFnZynYoH9Ow2PTVulKw==</Q><DP>v7aflznxrebxdieAcu0qNztl1w9QQEZKurLaKseReq1BZyZ3Bm+u8yn1RRfvJ4V2ZzbZ45FfXt0Yi5FOVlBk3w==</DP><DQ>56s4yCafZ8mFwdr+GWorcp1rQscX+sErcVpE8IML3f/cDfTl4gqI1le95hh9iljqC5LAzA1HR+H4mmJAKkKCQw==</DQ><InverseQ>BOFMMz/xEWfo7NzfAopBYRQypB68DYIbL53nxVUQ8LQCQVhG/tgs4R4mvDpyeBC0W9gFsd/kBuzpTBDaNEhe+A==</InverseQ><D>P0CzAkCnd+0QUHgtdLdXEDks6muVH+H6tMj0B4iklSjB4z6lWLwFyRSYe4CkV7Sg/40B3pCVhHZdrAx/f1mjSDzWdGsfjjt4LxFgdIBKUyu/z3fePtRVcCtrUv0niCjhFV6hyhjVCjdtdyPMgIfdfBx36AEJtGUciyHRbXDr+0U=</D></RSAKeyValue>
 
