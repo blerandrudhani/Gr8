@@ -13,14 +13,13 @@ class rsa
             string celesiPublic = r.ToXmlString(false);
             File.WriteAllText("C:/Users/hp/Desktop/keys/" + emri + ".xml", celesiPublic);
             
-             string filepath = "C:/Users/hp/Desktop/keys/users.txt";
-            emri = emri + " ";
-            File.AppendAllText(filepath, emri);
+             Console.WriteLine(" User : " + emri + " u krijua");
         }
         public void deleteUser(string emri)
         {
             File.Delete("C:/Users/hp/Desktop/keys/" + emri + ".xml");
             File.Delete("C:/Users/hp/Desktop/keys/" + emri + "pri.xml");
+            Console.WriteLine(" User : " + emri + " u fshi");
         }
         public void exportKey(string emri, string opcioni)
         {
@@ -69,7 +68,7 @@ class rsa
             arg[0] = arg[0] + " ";
             File.AppendAllText(filepath, arg[0]);
         
-        if (path == " ")
+        if (String.IsNullOrEmpty(path))
         {
             Console.WriteLine("Encrypted ...:        " + enctext);
 
@@ -82,7 +81,14 @@ class rsa
 
         }
 
-            
+            string filepath = "C:/Users/hp/Desktop/keys/users.txt";
+        emri = emri + " ";
+        File.AppendAllText(filepath, emri);
+
+
+        
+        arg[0] = arg[0] + " ";
+        File.AppendAllText(filepath, arg[0]);
 
             
             
