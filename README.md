@@ -111,8 +111,9 @@ test 26: shuvkhqghwmh
 
 
 
-Projekti në lëndën Siguria e të Dhënave
-Faza e dytë
+
+                                         Projekti në lëndën Siguria e të Dhënave
+                                                    Faza e dytë
 
 
 
@@ -122,14 +123,14 @@ Faza e dytë
 Përdorimi : 
 
 
-                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
+                                                  <args[0]>         <args[1]>        <args[2]>          <args[3]>
 
-                                   Create User   =>             create-user        <emri>      
-                                   Delete User   =>             delete-user        <emri>              
-                                   Import Key    =>             import-key          <emri>            <path>              
-                                  Export Key      =>            export-key           <emri>            <opcioni>  
-                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
-                                 Read Text        =>              read-text            <mesazhi>
+                     Create User   =>             create-user        <emri>      
+                     Delete User   =>             delete-user        <emri>              
+                     Import Key    =>             import-key         <emri>           <path>              
+                   Export Key      =>             export-key         <emri>           <opcioni>  
+                  Write Text       =>             write-text         <emri>           <mesazhi>           <path>      
+                  Read Text        =>             read-text          <mesazhi>
 
 
 
@@ -157,154 +158,32 @@ Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran teks
 
 Rezultatet e ekzekutimit :
 
- 
- 
-Projekti në lëndën Siguria e të Dhënave
-Faza e dytë
+  
+C:\detyra>b create-user siguria
+ User :siguria u krijua
 
 
+C:\detyra>b export-key siguria private
+ Celesi privat ..: 
+<RSAKeyValue><Modulus>tWDE0CgTAOQOWsGklkg+irGvDoLM/uGNCn3XeuTtqWLWrenZ15/VZ0/B/flYR4S0698sp18E+UoNOM1sE8V4bX1OnZrsp5O2rAOVYjMSoGrTn7B74kiInHeYQw/LZmZGghuxgqHvADoxyLj4jdGet2lM/+R2Aw5MopaHQ3BkqV0=</Modulus><Exponent>AQAB</Exponent><P>xlwndCJK8GPG30VWG712pKuHz/EXe/JJbItC7HMbNIHyRKqhMP3FRUoB/iM8Xg8ZY1wwjsNX2oMI7jyLA443lw==</P><Q>6hVWtwP3ArUQ9xxPmkwbiWQg4uimMAnQEiWPU7Gp09VFY8cJpV91k+WKefX3LZOgpRAFnZynYoH9Ow2PTVulKw==</Q><DP>v7aflznxrebxdieAcu0qNztl1w9QQEZKurLaKseReq1BZyZ3Bm+u8yn1RRfvJ4V2ZzbZ45FfXt0Yi5FOVlBk3w==</DP><DQ>56s4yCafZ8mFwdr+GWorcp1rQscX+sErcVpE8IML3f/cDfTl4gqI1le95hh9iljqC5LAzA1HR+H4mmJAKkKCQw==</DQ><InverseQ>BOFMMz/xEWfo7NzfAopBYRQypB68DYIbL53nxVUQ8LQCQVhG/tgs4R4mvDpyeBC0W9gFsd/kBuzpTBDaNEhe+A==</InverseQ><D>P0CzAkCnd+0QUHgtdLdXEDks6muVH+H6tMj0B4iklSjB4z6lWLwFyRSYe4CkV7Sg/40B3pCVhHZdrAx/f1mjSDzWdGsfjjt4LxFgdIBKUyu/z3fePtRVcCtrUv0niCjhFV6hyhjVCjdtdyPMgIfdfBx36AEJtGUciyHRbXDr+0U=</D></RSAKeyValue>
 
 
 
+C:\detyra>b import-key siguri C:\Users\hp\Desktop\write.txt
+ File u zhvendos : C:/Users/hp/Desktop/keys/siguri
 
-Përdorimi : 
 
+C:\detyra>b write-text siguria pershendetje ""
+SWfpsedDp/c=
+Encrypted ...:        mQzcelucgVs= jKPLM9aNBXE= XulHvdCjBTHtInxydOjKXmIPG7l65ktphUB7B/6qqQ4Vx8G3XprR15WeXLxIiA6KTeSAD0LydLrGAkkePu/EqwpgtJpsOWdT/e3vQin65T6oNXPKzCzWKOuJTVkpj2kQe+GsbkiVCNp9h9M8xj3O6AQaFlnlNnxphlLrbVjX+9E= owd/gWUupcOFFOe9k5keJg==
 
-                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
 
-                                   Create User   =>             create-user        <emri>      
-                                   Delete User   =>             delete-user        <emri>              
-                                   Import Key    =>             import-key          <emri>            <path>              
-                                  Export Key      =>            export-key           <emri>            <opcioni>  
-                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
-                                 Read Text        =>              read-text            <mesazhi>
 
+C:\detyra>b read-text "mQzcelucgVs= jKPLM9aNBXE= XulHvdCjBTHtInxydOjKXmIPG7l65ktphUB7B/6qqQ4Vx8G3XprR15WeXLxIiA6KTeSAD0LydLrGAkkePu/EqwpgtJpsOWdT/e3vQin65T6oNXPKzCzWKOuJTVkpj2kQe+GsbkiVCNp9h9M8xj3O6AQaFlnlNnxphlLrbVjX+9E= owd/gWUupcOFFOe9k5keJg=="
+ Emri ..:siguria
+ Decrypted ..:pershendetje
 
 
 
-
-
-Komanda : 
-
-
-Create User – krijon celesin public dhe privat per perdoruesin
-Delete User – fsjin celesin public dhe privat te perdoruesit
-Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
-Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
-Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
-Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
-
-          
-
-
-
-
-
-
-
-
-Rezultatet e ekzekutimit :
-
- 
- 
-
-Projekti në lëndën Siguria e të Dhënave
-Faza e dytë
-
-
-
-
-
-
-Përdorimi : 
-
-
-                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
-
-                                   Create User   =>             create-user        <emri>      
-                                   Delete User   =>             delete-user        <emri>              
-                                   Import Key    =>             import-key          <emri>            <path>              
-                                  Export Key      =>            export-key           <emri>            <opcioni>  
-                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
-                                 Read Text        =>              read-text            <mesazhi>
-
-
-
-
-
-
-Komanda : 
-
-
-Create User – krijon celesin public dhe privat per perdoruesin
-Delete User – fsjin celesin public dhe privat te perdoruesit
-Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
-Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
-Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
-Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
-
-          
-
-
-
-
-
-
-
-
-Rezultatet e ekzekutimit :
-
- 
- 
-
-Projekti në lëndën Siguria e të Dhënave
-Faza e dytë
-
-
-
-
-
-
-Përdorimi : 
-
-
-                                                                              <args[0]>         <args[1]>      <args[2]>         <args[3]>
-
-                                   Create User   =>             create-user        <emri>      
-                                   Delete User   =>             delete-user        <emri>              
-                                   Import Key    =>             import-key          <emri>            <path>              
-                                  Export Key      =>            export-key           <emri>            <opcioni>  
-                                 Write Text       =>             write-text            <emri>          <mesazhi>       <path>      
-                                 Read Text        =>              read-text            <mesazhi>
-
-
-
-
-
-
-Komanda : 
-
-
-Create User – krijon celesin public dhe privat per perdoruesin
-Delete User – fsjin celesin public dhe privat te perdoruesit
-Import Key – e zhvendos celesin public apo privat prej nje lokacioni ne lokacionin tjeter
-Export Key – e shfaq ne ekran celesin public apo privat varsisht nga opcioni I zgjedhur
-Write text -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose e shfaq ne ekran nese path nuk jepet
-Read Text – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
-
-          
-
-
-
-
-
-
-
-
-Rezultatet e ekzekutimit :
-
- 
- 
-
-
-
+C:\detyra>b delete-user siguria
+ User : siguria u fshi
