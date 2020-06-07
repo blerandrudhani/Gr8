@@ -208,3 +208,90 @@ C:\detyra>b delete-user siguria
  User : siguria u fshi
  
  
+ 
+ 
+ 
+ 
+                            Projekti në lëndën Siguria e të Dhënave
+                                        Faza e tretë
+                                        
+
+
+Përdorimi : 
+
+
+                                    <args[0]>      <args[1]>       <args[2]>          <args[3]>      <args[4]>
+
+               Create User   =>     create-user      <emri>      
+               Delete User   =>     delete-user      <emri>              
+               Login         =>     import-key       <emri>         <path>              
+               Status	       =>     export-key       <emri>         <opcioni>  
+               Write Text    =>     write-text       <emri>         <mesazhi>          <path>          <tokeni>     
+               Read Text     =>     read-text        <mesazhi>      <tokeni>
+
+
+Komanda : 
+
+Create User –  krijon nje perdorues si dhe kerkon nje fjalekalim
+
+Delete User –  fshin te dhenat e  perdoruesit
+
+Login 		  –  e teston shfytezuesin si dhe fjalekalimin nese ka sukses leshohet nje token i nenshkruar i cili
+		            perdoret per autentifikim                                                               
+    
+Status      – na jep informata rreth tokenit
+
+Write text  -  e enkodon nje tekst te dhene nga perdoruesi dhe e ruan ne nje file ne qofte se jepet path ose
+              shfaq ne ekran nese path nuk jepet
+Read Text   – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran tekstin e dekoduar
+
+
+
+Rezultatet e ekzekutimit :
+
+
+C:\detyra>b create-user hello
+ Jepni fjalekalimin ..: fiek2018
+ Perserit fjalekalimin ..: fiek2018
+ Fjalkalimi perputhet
+ User : hello u krijua
+ 
+ 
+ 
+ 
+ C:\detyra>b login world
+ Password ...: fiek2018
+ Tokeni ..: cfIxmIARW7sbijchqv9YgPyi8u5lf/RnbXUaltYvCFKcpXeq1yxPBT/sDChr1iZcRtnMq9k37nuSt60MqvnGkHnpnuJJqZoKS1spJfpNw5Z7Hi0z0USDgc0NAx0BRF7AH1/HAACEsQ5TMEHgFGqK2KRHu77dJmHcyGBNTyH5A4jTozYkOr6F5p072CC0uwxlPnUY6YinQ2/ixWMO3xuIHumgbyOWe1s7UEYI+37CAu8bDcMS/ea/yiYBoIpBJ6SLW5PtgAeAzYS2uBZFCykNliMArxvVtrZ+7iX1kiR0tlmfwKdUFT1D8kM3fDXBr7vZO4X8L4KqGgibPWEh68BEpQ== Ni83LzIwMjAgODozNjo1NSBQTQ==
+
+ 
+
+
+C:\detyra>b write-text hello pershendetje "" "cfIxmIARW7sbijchqv9YgPyi8u5lf/RnbXUaltYvCFKcpXeq1yxPBT/sDChr1iZcRtnMq9k37nuSt60MqvnGkHnpnuJJqZoKS1spJfpNw5Z7Hi0z0USDgc0NAx0BRF7AH1/HAACEsQ5TMEHgFGqK2KRHu77dJmHcyGBNTyH5A4jTozYkOr6F5p072CC0uwxlPnUY6YinQ2/ixWMO3xuIHumgbyOWe1s7UEYI+37CAu8bDcMS/ea/yiYBoIpBJ6SLW5PtgAeAzYS2uBZFCykNliMArxvVtrZ+7iX1kiR0tlmfwKdUFT1D8kM3fDXBr7vZO4X8L4KqGgibPWEh68BEpQ== Ni83LzIwMjAgODozNjo1NSBQTQ=="
+8IzHPWgYgnU=
+
+Encrypted ...:        Lc8enKJ4L+Y= nlsV8EamSfE= Jj5QwRi7fBWxiauSqZ90WJ0TrIJdZ76MV7zWpvP246Z4efULkiK+35zUBc6p+wx9GB03xEe+QybCCml/+2U5gseDtw+tBkWrxcZk/RHlbACTKnkB0/F1y9FkuAUzlfAtt+YhoZMZDhzJOvWGbY8/E+xya8ReC2JqKBwdf6yGRUWWJvIfxZzn22ojD9+t7VYaSlOuNyco3lDFHDaqEFMETKLfDItliTnh/RLVtTg039L/j4bMSJQrO/a+J3d6rqrs2o0ZTNKAZdvcRdjul++X0fNBGK2gZgGO1sBvACqzSLgkxV9oRdfaPUNfjYSZYgu82SI7S8eeA5UngtnZuXFVSw== 9VKZItVUZII/v4LWNgkVbg== eDgHf9bJ6YfgjhreJsW4e7KkB92a7q4SD/ehfRKLxsXXPC83RmkjDdkT+H1ghkq5X18iIwbTAtPtFXV/XxmfOZwLdw1eKE7pwPdlBkulcri76NtmFJxdUUquKXAuejVlfVVMXNuTlROzb2yD3hcitXgNy77OcWvsXwJlg06NnugEkVpCn8tX+MsfO25PHJ9FOlRbSmdPp+dHU++mb1mq2eKYTzWCey0zzpASfyFfyHug4ql53uZlxKkf5Aaw0HqOr447FnUp2sozjdtOoqcRosEKWIwzZ+KfTSxpDvEGc8D3nlVtevQnZoEBXNoqMU84J2w14K3QRXgebF2ZopR1og== cfIxmIARW7sbijchqv9YgPyi8u5lf/RnbXUaltYvCFKcpXeq1yxPBT/sDChr1iZcRtnMq9k37nuSt60MqvnGkHnpnuJJqZoKS1spJfpNw5Z7Hi0z0USDgc0NAx0BRF7AH1/HAACEsQ5TMEHgFGqK2KRHu77dJmHcyGBNTyH5A4jTozYkOr6F5p072CC0uwxlPnUY6YinQ2/ixWMO3xuIHumgbyOWe1s7UEYI+37CAu8bDcMS/ea/yiYBoIpBJ6SLW5PtgAeAzYS2uBZFCykNliMArxvVtrZ+7iX1kiR0tlmfwKdUFT1D8kM3fDXBr7vZO4X8L4KqGgibPWEh68BEpQ==
+
+
+C:\detyra>b read-text "Lc8enKJ4L+Y= nlsV8EamSfE= Jj5QwRi7fBWxiauSqZ90WJ0TrIJdZ76MV7zWpvP246Z4efULkiK+35zUBc6p+wx9GB03xEe+QybCCml/+2U5gseDtw+tBkWrxcZk/RHlbACTKnkB0/F1y9FkuAUzlfAtt+YhoZMZDhzJOvWGbY8/E+xya8ReC2JqKBwdf6yGRUWWJvIfxZzn22ojD9+t7VYaSlOuNyco3lDFHDaqEFMETKLfDItliTnh/RLVtTg039L/j4bMSJQrO/a+J3d6rqrs2o0ZTNKAZdvcRdjul++X0fNBGK2gZgGO1sBvACqzSLgkxV9oRdfaPUNfjYSZYgu82SI7S8eeA5UngtnZuXFVSw== 9VKZItVUZII/v4LWNgkVbg== eDgHf9bJ6YfgjhreJsW4e7KkB92a7q4SD/ehfRKLxsXXPC83RmkjDdkT+H1ghkq5X18iIwbTAtPtFXV/XxmfOZwLdw1eKE7pwPdlBkulcri76NtmFJxdUUquKXAuejVlfVVMXNuTlROzb2yD3hcitXgNy77OcWvsXwJlg06NnugEkVpCn8tX+MsfO25PHJ9FOlRbSmdPp+dHU++mb1mq2eKYTzWCey0zzpASfyFfyHug4ql53uZlxKkf5Aaw0HqOr447FnUp2sozjdtOoqcRosEKWIwzZ+KfTSxpDvEGc8D3nlVtevQnZoEBXNoqMU84J2w14K3QRXgebF2ZopR1og== cfIxmIARW7sbijchqv9YgPyi8u5lf/RnbXUaltYvCFKcpXeq1yxPBT/sDChr1iZcRtnMq9k37nuSt60MqvnGkHnpnuJJqZoKS1spJfpNw5Z7Hi0z0USDgc0NAx0BRF7AH1/HAACEsQ5TMEHgFGqK2KRHu77dJmHcyGBNTyH5A4jTozYkOr6F5p072CC0uwxlPnUY6YinQ2/ixWMO3xuIHumgbyOWe1s7UEYI+37CAu8bDcMS/ea/yiYBoIpBJ6SLW5PtgAeAzYS2uBZFCykNliMArxvVtrZ+7iX1kiR0tlmfwKdUFT1D8kM3fDXBr7vZO4X8L4KqGgibPWEh68BEpQ==" "cfIxmIARW7sbijchqv9YgPyi8u5lf/RnbXUaltYvCFKcpXeq1yxPBT/sDChr1iZcRtnMq9k37nuSt60MqvnGkHnpnuJJqZoKS1spJfpNw5Z7Hi0z0USDgc0NAx0BRF7AH1/HAACEsQ5TMEHgFGqK2KRHu77dJmHcyGBNTyH5A4jTozYkOr6F5p072CC0uwxlPnUY6YinQ2/ixWMO3xuIHumgbyOWe1s7UEYI+37CAu8bDcMS/ea/yiYBoIpBJ6SLW5PtgAeAzYS2uBZFCykNliMArxvVtrZ+7iX1kiR0tlmfwKdUFT1D8kM3fDXBr7vZO4X8L4KqGgibPWEh68BEpQ== Ni83LzIwMjAgODozNjo1NSBQTQ=="
+ Emri i marresit ..:hello
+ Decrypted ..:pershendetje
+ Emri i derguesit ..:world
+ Nenshkrimi ..: valid
+
+
+C:\detyra>b status "epk3ipIGKu+nyMYfWrSgh+mWtdVE2basCwpJqXoXUhZ+1Fa3wyfLI5IURfFRzihnZP/v5fcqFwy2Umg9Rdfbk0PCnOopA6IB7h1WgMFyxnp7GB20wLFeAgU31U04PPkTUw6ZLuaPJq5lfFjRvi2WG3cNI8ez284Npknkc4SebMVZiKodZrcu8Skrmb2iS9590KQgUF2YepWtgGT1sFnPE8UjZW+ZFxj42XnpKcjL/IvadQSWN7ohoy/hKg1JdmWnWWIWgOrrQk7IGrXepyjAciI2plpRLRXO9J/wId87nQDE9HKwL3hsasr/Upa7YQvajsLR1LydB4Ot1bMX/qZ/FA== Ni83LzIwMjAgMTA6MDA6MjggQU0="
+Nuk ekziston
+
+
+C:\detyra>b delete-user hello
+ User : hello u fshi
+
+
+
+
+
+
+ 
+ 
+ 
+ 
