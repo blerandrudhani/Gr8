@@ -5,6 +5,47 @@ class rsa
         des des = new des();
         public void createUser(string emri)
         {
+             SHA1CryptoServiceProvider sh1 = new SHA1CryptoServiceProvider();
+
+        DateTime now = DateTime.Now;
+        byte[] slt = new Byte[10];
+        Random rand = new Random();
+        rand.NextBytes(slt);
+
+        string salt = Convert.ToBase64String(slt);
+
+        //Console.Write(salt);
+        Regex rg = new Regex("^(?=.{6,}$)(?=.*[a-z])(?=.*[0-9]).*$");
+
+
+
+        Console.WriteLine(" Jepni fjalekalimin ..: ");
+        var fjalkalimi = Console.ReadLine();// rregulloje sikur read-s
+
+        var rt = rg.IsMatch(fjalkalimi);
+        // Console.Write(rt);
+
+
+        if (rt == false)
+        {
+            Console.WriteLine(" Fjalkalimi duhet te ket se paku 6 karaktete dhe  nje numer");
+            return;
+        }
+        fjalkalimi = Convert.ToBase64String(sh1.ComputeHash(Convert.FromBase64String(fjalkalimi + salt)));
+        Console.WriteLine(" Perserit fjalekalimin ..: ");
+        var perserit = Console.ReadLine();
+        perserit = Convert.ToBase64String(sh1.ComputeHash(Convert.FromBase64String(perserit + salt)));
+
+        if (fjalkalimi == perserit)
+        {
+            Console.WriteLine(" Fjalkalimi perputhet");
+            File.AppendAllText("C:/Users/hp/Desktop/db.txt", user + " " + salt + " " + fjalkalimi + " " + now + "\n");
+
+
+        }
+        else { Console.WriteLine(" Fjalkalimi nuk perputhet"); }
+            
+            
             RSACryptoServiceProvider r = new RSACryptoServiceProvider();
             //private key
             string celesiPrivat = r.ToXmlString(true);
