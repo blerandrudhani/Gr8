@@ -114,7 +114,7 @@ class rsa
             string KEY = Convert.ToBase64String(keyb);
             string IV = Convert.ToBase64String(ivb);
             
-             string rrrr = encrypt(emri, mesazhi, KEY, IV);   
+              
             string enctext = encrypt(emri, mesazhi, KEY, IV);
             string filere = File.ReadAllText("C:/Users/hp/Desktop/keys/users.txt");
             string[] a = filere.Split();
@@ -126,8 +126,7 @@ class rsa
                 
              RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
              var privatekey = File.ReadAllText("C:/Users/hp/Desktop/keys/" + h + "pri.xml");
-             rsa.FromXmlString(privatekey);
-             string[] arg = rrrr.Split();  
+             rsa.FromXmlString(privatekey);  
              byte[] msgb = Encoding.ASCII.GetBytes(arg[3]);
 
             string[] arg = enctext.Split();
@@ -135,18 +134,17 @@ class rsa
             arg[0] = arg[0] + " ";
             File.AppendAllText(filepath, arg[0]);
         
-        string encr = rrrr + " " + Convert.ToBase64String(rsa.Encrypt(msgb, true)) + " " + tokench[0];        
+        string encr = enctext + " " + Convert.ToBase64String(rsa.Encrypt(msgb, true)) + " " + tokench[0];        
               
         if (String.IsNullOrEmpty(path))
         {
             Console.WriteLine("Encrypted ...:        " + encr);
-            Console.WriteLine("Encrypted ...:        " + enctext);
+            
 
         }
         else
         {
-            File.WriteAllText(path + emri + "encrypted.xml", encr);
-            File.WriteAllText("C:/Users/hp/Desktop/keys/" + emri + "encrypted.xml", enctext);
+            File.WriteAllText(path + emri + "encrypted.xml", encr)
             Console.WriteLine(" Teksti u ruajt ne :   C:/Users/hp/Desktop/keys/  ");
 
 
@@ -175,7 +173,6 @@ class rsa
             string m = msg[0] + " " + msg[1] + " " + msg[2] + " " + msg[3];
             //string t = Console.ReadLine();//File.ReadAllText("C:/Users/hp/Desktop/keys/"+ emri +"encrypted.xml");
             string dec = decrypt(m);
-            string dec = decrypt(mesazhi);
             string[] arg = dec.Split();
         
     
