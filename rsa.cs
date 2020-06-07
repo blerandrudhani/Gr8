@@ -58,33 +58,9 @@ class rsa
         }
         public void deleteUser(string emri)
         {
-             File.Delete("C:/Users/hp/Desktop/keys/" + emri + ".xml");
+            File.Delete("C:/Users/hp/Desktop/keys/" + emri + ".xml");
             File.Delete("C:/Users/hp/Desktop/keys/" + emri + "pri.xml");
-            string filere = File.ReadAllText("C: /Users/hp/Desktop/db.txt");
-            string[] a = filere.Split();
-           
-            var temp = "";
-           
-            
-           
-            
-             for (int i = 0; i < a.Length; i++)
-             {
-                if (emri == a[i])
-                {
-                    temp = a[i] + " " + a[i + 1] + " " + a[i + 2] + " " + a[i + 3] + " " + a[i + 4] + " " + a[i + 5];
-                }
-                
-
-             }
-            string save = filere.Replace(temp, " ");
-            
-            File.Delete("C: /Users/hp/Desktop/db.txt");
-           var newfile= File.Create("C: /Users/hp/Desktop/db.txt");
-            newfile.Close();
-           File.AppendAllText("C: /Users/hp/Desktop/db.txt", save);
-            
-            Console.WriteLine(" User : " + emri + "u fshi");
+            Console.WriteLine(" User : " + emri + " u fshi");
         }
         public void exportKey(string emri, string opcioni)
         {
@@ -115,33 +91,63 @@ class rsa
         Console.WriteLine("key u zhvendos ne :" + dest);
 
     }
-    public void writeText(string emri, string mesazhi,string path)
+    public void writeText(string emri, string mesazhi,string path,string token)
         {
+            faza3 f3 = new faza3();
+            if (f3.status(token) == "Nuk ekziston")
+            {
+                Console.WriteLine(" Tokeni nuk ekziston ");
+            }
+            else
+            {
+              string[] tokench = token.Split();
+            
+        
             DES DESalg = DES.Create();
             byte[] keyb = new byte[8];
             byte[] ivb = new byte[8];
             keyb = DESalg.Key;
 
             ivb = DESalg.IV;
-            
-        string KEY = Convert.ToBase64String(keyb);
-            string IV = Convert.ToBase64String(ivb);
+            Random rand = new Random();
 
+            string KEY = Convert.ToBase64String(keyb);
+            string IV = Convert.ToBase64String(ivb);
+            
+             string rrrr = encrypt(emri, mesazhi, KEY, IV);   
             string enctext = encrypt(emri, mesazhi, KEY, IV);
-        string[] arg = enctext.Split();
-        string filepath = "C:/Users/hp/Desktop/keys/users.txt";
+            string filere = File.ReadAllText("C:/Users/hp/Desktop/keys/users.txt");
+            string[] a = filere.Split();
+                string h = "";
+                for (int i = 0; i < a.Length; i++)
+                {
+                    if (tokench[0] == a[i]) { h = a[i - 1]; }
+                }
+                
+             RSACryptoServiceProvider rsa = new RSACryptoServiceProvider(2048);
+             var privatekey = File.ReadAllText("C:/Users/hp/Desktop/keys/" + h + "pri.xml");
+             rsa.FromXmlString(privatekey);
+             string[] arg = rrrr.Split();  
+             byte[] msgb = Encoding.ASCII.GetBytes(arg[3]);
+
+            string[] arg = enctext.Split();
+             string filepath = "C:/Users/hp/Desktop/keys/users.txt";
             arg[0] = arg[0] + " ";
             File.AppendAllText(filepath, arg[0]);
         
+        string encr = rrrr + " " + Convert.ToBase64String(rsa.Encrypt(msgb, true)) + " " + tokench[0];        
+              
         if (String.IsNullOrEmpty(path))
         {
+            Console.WriteLine("Encrypted ...:        " + encr);
             Console.WriteLine("Encrypted ...:        " + enctext);
 
         }
         else
         {
+            File.WriteAllText(path + emri + "encrypted.xml", encr);
             File.WriteAllText("C:/Users/hp/Desktop/keys/" + emri + "encrypted.xml", enctext);
-            Console.WriteLine("teksti u ruajt ne :   C:/Users/hp/Desktop/keys/  ");
+            Console.WriteLine(" Teksti u ruajt ne :   C:/Users/hp/Desktop/keys/  ");
 
 
         }
@@ -160,19 +166,67 @@ class rsa
             
 
         }
-    public void readText(string mesazhi)
-    {
-        //string t = Console.ReadLine();//File.ReadAllText("C:/Users/hp/Desktop/keys/"+ emri +"encrypted.xml");
-        string dec = decrypt(mesazhi);
-        string[] arg = dec.Split();
-
+    public void readText(string mesazhi, string token)
+    {   
+        if (String.IsNullOrEmpty(token))
+        {
+            string[] msg = mesazhi.Split();
+            string m = msg[0] + " " + msg[1] + " " + msg[2] + " " + msg[3];
+            //string t = Console.ReadLine();//File.ReadAllText("C:/Users/hp/Desktop/keys/"+ emri +"encrypted.xml");
+            string dec = decrypt(m);
+            string dec = decrypt(mesazhi);
+            string[] arg = dec.Split();
+        
+    
 
 
 
         Console.WriteLine(" Emri ..:" + arg[0]);
         Console.WriteLine(" Decrypted ..:" + arg[1]);
+           
+        }
+        else
+        {
+            string[] msg = mesazhi.Split();
+            rsa rsa = new rsa();
 
-
+             string m = msg[0] + " " + msg[1] + " " + msg[2] + " " + msg[3];
+             string dec = decrypt(m);
+             string[] arg = dec.Split();
+             string filere = File.ReadAllText("C:/Users/hp/Desktop/keys/users.txt");//
+             string[] a = filere.Split();
+             string h = "";
+            
+            if(f3.status(token)=="Nuk ekziston")
+                {
+                    Console.Write(" Tokeni jo valid ");
+                    return;
+                }
+                
+            
+            string[] tokenich = token.Split();
+            string derguesi = "";
+             for (int i = 0; i < a.Length; i++)
+                {
+                    if (tokenich[0] == a[i]) { derguesi = a[i - 1]; }
+                }
+            string k = rsa.RSAdecr(derguesi, msg[4]);
+            string s = m + " " + k;
+            string desdcr = decrypt(s);
+            string[] dcr = desdcr.Split();
+            
+             Console.WriteLine(" Emri i marresit ..:" + arg[0]);
+             Console.WriteLine(" Decrypted ..:" + arg[1]);
+             Console.WriteLine(" Emri i derguesit ..:" + derguesi);//Encoding.ASCII.GetString(Convert.FromBase64String(derguesi)));
+               
+            if (arg[1] == dcr[1])
+                {
+                    Console.WriteLine(" Nenshkrimi ..: valid");
+                }
+            else
+                {
+                    Console.WriteLine(" Nenshkrimi ..: jovalid , mungon celesi publik" + derguesi);
+                }
 
 
         File.WriteAllText("C:/Users/hp/Desktop/keys/" + arg[0] + "decrypted.xml", dec);
