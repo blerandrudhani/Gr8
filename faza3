@@ -1,0 +1,89 @@
+class faza3
+    {
+        public  void Login(string name)
+        {
+            SHA1CryptoServiceProvider sh1 = new SHA1CryptoServiceProvider();
+            string filere = File.ReadAllText("C: /Users/hp/Desktop/db.txt");
+            string[] a = filere.Split();
+            string userdb = "";
+            var salt = "";
+            var pass = "";
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (name == a[i]) { userdb = a[i]; salt = a[i + 1]; pass = a[i + 2]; }
+
+            }
+
+
+
+
+            var now = DateTime.Now;
+            // var id = 1;
+           // pass = Convert.ToBase64String(sh1.ComputeHash(Convert.FromBase64String(pass)));//ndryshoj
+Console.WriteLine(" Password ...: ");
+            string fjalkalimi = Console.ReadLine();
+            fjalkalimi = Convert.ToBase64String(sh1.ComputeHash(Convert.FromBase64String(fjalkalimi+salt)));//ndryshoj
+
+            if (name == userdb && pass == fjalkalimi)
+            {
+                RSACryptoServiceProvider rsa = new RSACryptoServiceProvider();
+                var privatekey = File.ReadAllText("C:/Users/hp/Desktop/keys/" + name + "pri.xml");
+                rsa.FromXmlString(privatekey);
+                var koha = now.AddMinutes(20).ToString();
+
+
+
+                byte[] userb = Encoding.ASCII.GetBytes(name);
+                byte[] kohab = Encoding.ASCII.GetBytes(koha);
+                string kohast = Convert.ToBase64String(Encoding.ASCII.GetBytes(koha));
+
+                string userst = Convert.ToBase64String(rsa.Encrypt(userb, true));
+
+                string tokeni = userst + " " + kohast;
+
+                Console.WriteLine(" Tokeni ..: " + tokeni);//tokeni n db
+                string filepath = "C:/Users/hp/Desktop/keys/users.txt";
+                userdb = userdb + " ";
+                File.AppendAllText(filepath, userdb);
+
+
+
+                userst = userst + " ";
+                File.AppendAllText(filepath, userst);
+
+
+            }
+            else
+            {
+                Console.WriteLine(" Fjalkalimi ose user gabim");
+            }
+
+        }
+        public  string status(string token)
+        {
+            //rsa rsa = new rsa();
+
+            var now = DateTime.Now;
+            string[] tok = token.Split();
+            string filere = File.ReadAllText("C:/Users/hp/Desktop/keys/users.txt");//
+            string[] a = filere.Split();
+            string h = "";
+            for (int i = 0; i < a.Length; i++)
+            {
+                if (tok[0] == a[i]) { h = a[i - 1]; }
+            }
+            //string dec = rsa.RSAdecr(h, tok[0]);
+
+            var dataleshimit = Encoding.ASCII.GetString(Convert.FromBase64String(tok[1]));
+
+            DateTime dt = DateTime.Parse(dataleshimit);
+            //0=>same
+            //1=>later than ,-1=>earlier than
+
+            var result = DateTime.Compare(now, dt);
+
+            if (result <= 0 && String.IsNullOrEmpty(h)!=true) { return " Ekziston "; }
+            else { return "Nuk ekziston"; }
+           
+        }
+
