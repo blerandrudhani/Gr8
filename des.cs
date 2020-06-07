@@ -2,10 +2,10 @@ namespace ds
 {
     class des
     {
-        rsa rsa = new rsa();
+        
         public string DESenc(string emri, string keystr, string ivstr, string teksti)
         {
-
+rsa rsa = new rsa();
             string k = rsa.RSAdecr(emri, keystr);
 
             byte[] key = Convert.FromBase64String(k);
@@ -32,6 +32,7 @@ namespace ds
 
         public string DESdecrypt(string emri, string keystr, string ivstr, string teksti)
         {
+            rsa rsa = new rsa();
  string filere = File.ReadAllText("C:/Users/hp/Desktop/keys/users.txt");
             string[] a = filere.Split();
             for (int i = 0; i < a.Length; i++)
