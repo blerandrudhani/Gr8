@@ -58,9 +58,33 @@ class rsa
         }
         public void deleteUser(string emri)
         {
-            File.Delete("C:/Users/hp/Desktop/keys/" + emri + ".xml");
+             File.Delete("C:/Users/hp/Desktop/keys/" + emri + ".xml");
             File.Delete("C:/Users/hp/Desktop/keys/" + emri + "pri.xml");
-            Console.WriteLine(" User : " + emri + " u fshi");
+            string filere = File.ReadAllText("C: /Users/hp/Desktop/db.txt");
+            string[] a = filere.Split();
+           
+            var temp = "";
+           
+            
+           
+            
+             for (int i = 0; i < a.Length; i++)
+             {
+                if (emri == a[i])
+                {
+                    temp = a[i] + " " + a[i + 1] + " " + a[i + 2] + " " + a[i + 3] + " " + a[i + 4] + " " + a[i + 5];
+                }
+                
+
+             }
+            string save = filere.Replace(temp, " ");
+            
+            File.Delete("C: /Users/hp/Desktop/db.txt");
+           var newfile= File.Create("C: /Users/hp/Desktop/db.txt");
+            newfile.Close();
+           File.AppendAllText("C: /Users/hp/Desktop/db.txt", save);
+            
+            Console.WriteLine(" User : " + emri + "u fshi");
         }
         public void exportKey(string emri, string opcioni)
         {
