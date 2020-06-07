@@ -118,8 +118,8 @@ class rsa
             string enctext = encrypt(emri, mesazhi, KEY, IV);
             string filere = File.ReadAllText("C:/Users/hp/Desktop/keys/users.txt");
             string[] a = filere.Split();
-                string h = "";
-                for (int i = 0; i < a.Length; i++)
+            string h = "";
+            for (int i = 0; i < a.Length; i++)
                 {
                     if (tokench[0] == a[i]) { h = a[i - 1]; }
                 }
@@ -131,7 +131,7 @@ class rsa
              byte[] msgb = Encoding.ASCII.GetBytes(arg[3]);
 
             string[] arg = enctext.Split();
-             string filepath = "C:/Users/hp/Desktop/keys/users.txt";
+            string filepath = "C:/Users/hp/Desktop/keys/users.txt";
             arg[0] = arg[0] + " ";
             File.AppendAllText(filepath, arg[0]);
         
@@ -152,7 +152,7 @@ class rsa
 
         }
 
-            string filepath = "C:/Users/hp/Desktop/keys/users.txt";
+        string filepath = "C:/Users/hp/Desktop/keys/users.txt";
         emri = emri + " ";
         File.AppendAllText(filepath, emri);
 
@@ -206,7 +206,7 @@ class rsa
             
             string[] tokenich = token.Split();
             string derguesi = "";
-             for (int i = 0; i < a.Length; i++)
+            for (int i = 0; i < a.Length; i++)
                 {
                     if (tokenich[0] == a[i]) { derguesi = a[i - 1]; }
                 }
@@ -218,8 +218,7 @@ class rsa
              Console.WriteLine(" Emri i marresit ..:" + arg[0]);
              Console.WriteLine(" Decrypted ..:" + arg[1]);
              Console.WriteLine(" Emri i derguesit ..:" + derguesi);//Encoding.ASCII.GetString(Convert.FromBase64String(derguesi)));
-               
-            if (arg[1] == dcr[1])
+               if (arg[1] == dcr[1])
                 {
                     Console.WriteLine(" Nenshkrimi ..: valid");
                 }
