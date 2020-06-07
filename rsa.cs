@@ -168,6 +168,7 @@ class rsa
         }
     public void readText(string mesazhi, string token)
     {   
+        faza3 f3=new faza3();
         if (String.IsNullOrEmpty(token))
         {
             string[] msg = mesazhi.Split();
