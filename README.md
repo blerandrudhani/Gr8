@@ -212,12 +212,17 @@ C:\detyra>b delete-user siguria
  
  
  
-                            Projekti në lëndën Siguria e të Dhënave
-                                        Faza e tretë
+ 
+ 
+ 
+                            			Projekti në lëndën Siguria e të Dhënave
+                                        			Faza e tretë
                                         
 
 
 Përdorimi : 
+
+
 
 
                                     <args[0]>      <args[1]>       <args[2]>          <args[3]>      <args[4]>
@@ -225,12 +230,15 @@ Përdorimi :
                Create User   =>     create-user      <emri>      
                Delete User   =>     delete-user      <emri>              
                Login         =>     import-key       <emri>         <path>              
-               Status	       =>     export-key       <emri>         <opcioni>  
+               Status	     =>     export-key       <emri>         <opcioni>  
                Write Text    =>     write-text       <emri>         <mesazhi>          <path>          <tokeni>     
                Read Text     =>     read-text        <mesazhi>      <tokeni>
 
 
 Komanda : 
+
+
+
 
 Create User –  krijon nje perdorues si dhe kerkon nje fjalekalim
 
@@ -247,7 +255,13 @@ Read Text   – e dekodon tekstin e dhene nga perdoruesi dhe e shfaq ne ekran te
 
 
 
+
+
 Rezultatet e ekzekutimit :
+
+
+
+
 
 
 C:\detyra>b create-user hello
