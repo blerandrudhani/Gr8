@@ -302,9 +302,9 @@ C:\detyra>b delete-user hello
 
 
 
-
-
-
+Per ruajtjen e fjalkalimit ne bazen e te dhenave kemi perdor sh1 salt hash  algoritem 
+Shenimet ruhen ne nje text file db.text aty ruhet emri i perdorusit,salt,hash(pasword + salt ),data e leshimit te tokenit 
+Tokeni permbane emrin e perdoruesit te enkriptuar me  rsa dhe kohen e skadimit te tokenit 
  
  
  
