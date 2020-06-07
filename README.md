@@ -229,8 +229,8 @@ Përdorimi :
 
                Create User   =>     create-user      <emri>      
                Delete User   =>     delete-user      <emri>              
-               Login         =>     import-key       <emri>         <path>              
-               Status	     =>     export-key       <emri>         <opcioni>  
+               Login         =>     login            <emri>         <path>              
+               Status	     =>     status           <emri>         <opcioni>  
                Write Text    =>     write-text       <emri>         <mesazhi>          <path>          <tokeni>     
                Read Text     =>     read-text        <mesazhi>      <tokeni>
 
