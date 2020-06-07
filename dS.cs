@@ -15,6 +15,7 @@ namespace ds
             morse morseC = new morse();
             caesar caesarC = new caesar();
              rsa rsa = new rsa();
+            faza3 f3= new faza3();
 
                 if (args[0] == "1")
                 {
@@ -104,11 +105,19 @@ namespace ds
             }
             else if (args[0] == "write-text")
             {
-                rsa.writeText(args[1], args[2],args[3]);
+                rsa.writeText(args[1], args[2],args[3],args[4]);
             }
              else if (args[0] == "read-text")
             {
-                rsa.readText(args[1]);
+                rsa.readText(args[1],args[2]);
+            }
+            else if (args[0] == "login")
+            {
+                f3.Login(args[1]);
+            }
+            else if (args[0] == "status")
+            {
+                Console.WriteLine(f3.status(args[1]));
             }
                 else
                 {
